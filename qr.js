@@ -1,4 +1,4 @@
-const QRScanner = {
+window.QRScanner = {
     videoElement: null,
     canvasElement: null,
     scanning: false,
