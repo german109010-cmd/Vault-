@@ -1,24 +1,17 @@
 function bindActions() {
 
-    // LOGIN
-    const loginBtn = document.querySelector('[data-action="login"]');
-    if (loginBtn) {
-        loginBtn.onclick = () => Auth.login();
-    }
+    const map = {
+        "login": () => Auth.login(),
+        "register": () => Auth.register(),
+        "open-send": () => VaultApp.openSend(),
+        "open-receive": () => VaultApp.openReceive(),
+        "claim-airdrop": () => claimDailyAirdrop(),
+    };
 
-    // REGISTER
-    const registerBtn = document.querySelector('[data-action="register"]');
-    if (registerBtn) {
-        registerBtn.onclick = () => Auth.register();
-    }
-
-    // SEND
-    const sendBtn = document.querySelector('[data-action="open-send"]');
-    if (sendBtn) {
-        sendBtn.onclick = () => VaultApp.openSend();
-    }
-
-    // И т.д. по такому же принципу
+    Object.keys(map).forEach(action => {
+        const el = document.querySelector(`[data-action="${action}"]`);
+        if (el) el.onclick = map[action];
+    });
 }
 
 document.addEventListener('click', e => {
