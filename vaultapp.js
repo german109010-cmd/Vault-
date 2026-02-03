@@ -1,4 +1,4 @@
-const VaultApp = {
+window.VaultApp = {
     state: {
         vaultBalance: 0,
         usdtBalance: 0,
