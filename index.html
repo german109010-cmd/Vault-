@@ -1,0 +1,46 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vault</title>
+
+    <meta name="theme-color" content="#000000">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- QR code lib -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <!-- Router (невидимая навигация) -->
+    <script src="router.js"></script>
+</head>
+<body>
+
+    <!-- Здесь будут подгружаться страницы -->
+    <div id="app"></div>
+
+    <!-- JS модули (ВАЖЕН ПОРЯДОК) -->
+    <script src="firebase.js"></script>
+    <script src="qr.js"></script>
+    <script src="airdrop.js"></script>
+    <script src="auth.js"></script>
+    <script src="vaultapp.js"></script>
+    <script src="app.js"></script>
+
+    <!-- Стартовая страница -->
+    <script>
+        Router.load('auth');
+    </script>
+
+</body>
+</html>

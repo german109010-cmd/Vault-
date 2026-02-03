@@ -1,0 +1,5 @@
+checkAndResetDailyAirdrop
+loadDailyAirdropCount
+updateDailyAirdropCounter
+canClaimDailyAirdrop
+claimDailyAirdrop
