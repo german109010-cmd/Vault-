@@ -1,4 +1,4 @@
-const Auth = {
+window.Auth = {
     showMessage(text, type) {
         const msg = document.getElementById('authMessage');
         msg.textContent = text;
